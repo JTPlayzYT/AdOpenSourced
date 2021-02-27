@@ -52,7 +52,7 @@ async def advertise(ctx):
                 buildembed.set_image(url = image)
             buildembed.set_footer(icon_url = ctx.author.avatar_url,text = f"Sent by {ctx.author}")
             async with aiohttp.ClientSession() as session:
-                webhook = Webhook.from_url('Webhook URL here', adapter=AsyncWebhookAdapter(session))
+                webhook = Webhook.from_url('https://discord.com/api/webhooks/815031691819089921/nsxkM2DfsgC9p_Zl1_RAGnalHWTu8FQ20HKvJ44k2LT7BAqe1OvZV79Fi67b5c36-W6l', adapter=AsyncWebhookAdapter(session))
                 await webhook.send(embed=buildembed, username=ctx.author.name,avatar_url=ctx.author.avatar_url)
             done = Embed(title = "All sent!",description = "Thanks for your patience throughout this process.",color=discord.Color.green())
             msgyes = await author.send(embed = done)
@@ -72,4 +72,4 @@ async def advertise_error(ctx,error):
     else:
         print(f"Something went wrong there, here's an error: {error}")
         
-client.run("Token here")
+client.run("NjU5MDc1NjE5NzgyMzkzODg0.XgJCAA.D_-suEx_XdLKogNBJ4NUlTbCwTw")
