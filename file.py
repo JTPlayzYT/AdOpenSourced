@@ -11,7 +11,7 @@ import json
 import aiohttp
 from datetime import datetime
 intents = discord.Intents(messages=True,guilds=True)
-client = commands.Bot(command_prefix = "!",case_insensitive=True,intents=intents)
+client = commands.Bot(command_prefix = "f!",case_insensitive=True,intents=intents)
 
 def global_dm_check(author, guild):
     def inner_check(message):
